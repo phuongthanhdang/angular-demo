@@ -1,0 +1,21 @@
+<header [ngStyle]="{'background':visible ? 'var(--bg-main)' : 'transparent' ,
+'boxShadow':visible ? '2px 20px 30px var(--shadow-color)' : 'none'
+ }">
+    <nav>
+        <a href="#" class="logo">
+            <i class="fa-solid fa-person-hiking"></i> Travel
+        </a>
+        <div class="menu_btn" (click)="onClick()">
+
+            <i class="fa-solid fa-bars" *ngIf="!showMenu"></i>
+            <i class="fa-solid fa-xmark" *ngIf="showMenu"></i>
+        </div>
+        <ul [ngStyle]="{'height':showMenu ? '250px' : '0px'}">
+            <li *ngFor="let category of categories; let i = index">
+                <a href={{category.link}}>
+                    {{category.name}}
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
