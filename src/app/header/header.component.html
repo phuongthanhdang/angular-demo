@@ -17,5 +17,29 @@
                 </a>
             </li>
         </ul>
+        <div class="menu_header">
+            <ul *ngIf="!isLoggedIn">
+                <li>
+                    <a href="/register" class="nav-link" routerLink="register">Sign Up</a>
+                </li>
+                <li>
+                    <a href="/login" class="nav-link" routerLink="login">Login</a>
+                </li>
+            </ul>
+            <ul *ngIf="isLoggedIn">
+                <li>
+                    <a href="/profile" class="nav-link" routerLink="profile">{{ username }}</a>
+                </li>
+                <li>
+                    <a href class="nav-link" (click)="logout()">LogOut</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- <div class="menu_header">
+           
+           
+        </div> -->
     </nav>
+
 </header>

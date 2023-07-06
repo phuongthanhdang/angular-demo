@@ -20,4 +20,7 @@ export class HomeComponent implements OnInit {
     );
     console.log(this.content);
   }
+  reloadPage(): void {
+    window.location.reload();
+  }
 }

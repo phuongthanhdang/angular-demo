@@ -16,6 +16,9 @@ import { authInterceptorProviders } from './_helpers/auth.interceptor';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { ForgotComponent } from './forgot/forgot.component';
+import { ForgotPassComponent } from './forgot-pass/forgot-pass.component';
+import { ProductComponent } from './product/product.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +33,9 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     HeaderComponent,
     FooterComponent,
     SidebarComponent,
+    ForgotComponent,
+    ForgotPassComponent,
+    ProductComponent,
   ],
   imports: [
     BrowserModule,

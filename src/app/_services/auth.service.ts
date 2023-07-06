@@ -32,4 +32,34 @@ export class AuthService {
       httpOptions
     );
   }
+  forgotPass(email: string): Observable<any> {
+    return this.http.post(
+      AUTH_API + '/auth/send-password-reset-link',
+      {
+        email,
+      },
+      httpOptions
+    );
+  }
+  newPass(iv: string, encryptedData: string, newPass: string): Observable<any> {
+    return this.http.post(
+      AUTH_API + '/auth/forgot-password-email',
+      {
+        iv,
+        encryptedData,
+        newPass,
+      },
+      httpOptions
+    );
+  }
+  searchProduct(name: string, price: number) {
+    return this.http.post(
+      AUTH_API + '/product/search-product',
+      {
+        name,
+        price,
+      },
+      httpOptions
+    );
+  }
 }
