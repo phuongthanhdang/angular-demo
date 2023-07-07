@@ -10,6 +10,7 @@ import { BoardAdminComponent } from './board-admin/board-admin.component';
 import { ForgotComponent } from './forgot/forgot.component';
 import { ForgotPassComponent } from './forgot-pass/forgot-pass.component';
 import { ProductComponent } from './product/product.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path: 'forgot-password', component: ForgotComponent },
   { path: 'forgotpassword', component: ForgotPassComponent },
   { path: 'product', component: ProductComponent },
+  { path: 'product-detail', component: ProductDetailComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
 ];
 

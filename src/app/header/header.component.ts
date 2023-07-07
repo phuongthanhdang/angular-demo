@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TokenStorageService } from '../_services/token-storage.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -7,12 +8,16 @@ import { TokenStorageService } from '../_services/token-storage.service';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent implements OnInit {
-  constructor(private tokenStorageService: TokenStorageService) {}
+  constructor(
+    private tokenStorageService: TokenStorageService,
+    private router: Router
+  ) {}
   categories = [
     { name: 'home', link: '#' },
     { name: 'trending', link: '#trending' },
     { name: 'destination', link: '#destination' },
     { name: 'testimonials', link: '#testimonials' },
+    { name: 'product', link: '/product' },
     // { name: 'login', link: '/login' },
     // { name: 'register', link: '/register' },
   ];
@@ -53,5 +58,14 @@ export class HeaderComponent implements OnInit {
   logout(): void {
     this.tokenStorageService.signOut();
     window.location.reload();
+  }
+  profile() {
+    this.router.navigate(['/profile']);
+  }
+  register() {
+    this.router.navigate(['/register']);
+  }
+  login() {
+    this.router.navigate(['/login']);
   }
 }

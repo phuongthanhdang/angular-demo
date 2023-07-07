@@ -11,17 +11,25 @@ export class ProductComponent implements OnInit {
   price: any;
   message = false;
   errorMessage = '';
-  newObj = [];
+  products: any;
 
   constructor(private authService: AuthService) {}
   ngOnInit() {
     this.authService.searchProduct(this.name, this.price).subscribe(
       (data) => {
-        console.log(data);
+        // console.log(JSON.stringify(data));
+        this.products = data;
       },
       (err) => {
         this.errorMessage = err.error.message;
       }
     );
+
+    // this.product = this.product || [];
+    // this.product.forEach((element: any) => {
+    //   if (typeof this.product !== 'undefined') {
+    //     console.log('product', this.product);
+    //   }
+    // });
   }
 }
