@@ -3,37 +3,61 @@
  }">
     <nav>
         <a href="#" class="logo">
-            <i class="fa-solid fa-person-hiking"></i> Travel
+            <i class="fa-solid fa-paw"></i> PT2000
         </a>
         <div class="menu_btn" (click)="onClick()">
 
             <i class="fa-solid fa-bars" *ngIf="!showMenu"></i>
             <i class="fa-solid fa-xmark" *ngIf="showMenu"></i>
         </div>
-        <ul [ngStyle]="{'height':showMenu ? '250px' : '0px'}">
-            <li *ngFor="let category of categories; let i = index">
+        <ul class="clearfix" [ngStyle]="{'height':showMenu ? '250px' : '0px'}" style="margin-top: 20px;">
+            <!-- <li *ngFor="let category of categories; let i = index">
                 <a href={{category.link}}>
                     {{category.name}}
                 </a>
+            </li> -->
+            <li><a href="#">TRANG CHỦ</a></li>
+            <li><a href="#">GIỚI THIỆU</a></li>
+            <li>
+                <a href="#">SẢN PHẨM <span class="arrow">&#9660;</span></a>
+
+                <ul class="sub-menu">
+                    <li><a href="#">Tất cả</a></li>
+                    <li><a href="#">Đồ cho chó</a></li>
+                    <li><a href="#">Đồ cho mèo</a></li>
+                    <li><a href="#">Chim cảnh</a></li>
+                    <li><a href="#">Cá cảnh</a></li>
+                </ul>
             </li>
+            <li><a href="#">DỊCH VỤ</a></li>
+            <li class="current-item"><a href="#">TIN TỨC</a></li>
+            <li><a href="#">LIÊN HỆ</a></li>
         </ul>
         <div class="menu_header">
-            <ul *ngIf="!isLoggedIn">
-                <li>
-                    <a href="" class="nav-link" routerLink="register" (click)="register()">Sign Up</a>
-                </li>
-                <li>
-                    <a href="" class="nav-link" routerLink="login" (click)="login()">Login</a>
-                </li>
-            </ul>
-            <ul *ngIf="isLoggedIn">
-                <li>
-                    <a href="" class="nav-link" routerLink="profile" (click)="profile()">{{ username }}</a>
-                </li>
-                <li>
-                    <a href class="nav-link" (click)="logout()">LogOut</a>
-                </li>
-            </ul>
+            <div>
+                <ul *ngIf="!isLoggedIn">
+                    <li>
+                        <a href="" class="nav-link" routerLink="register" (click)="register()"><i
+                                class="fa-solid fa-address-card"></i> REGISTER</a>
+                    </li>
+                    <li>
+                        <a href="" class="nav-link" routerLink="login" (click)="login()"><i
+                                class="fa-solid fa-user"></i>
+                            LOGIN</a>
+                    </li>
+                </ul>
+                <ul *ngIf="isLoggedIn">
+                    <li style="display: flex;">
+
+                        <a href="" class="nav-link" routerLink="profile" (click)="profile()">{{ username }}</a>
+
+                    </li>
+                    <li>
+                        <a href class="nav-link" (click)="logout()">ĐĂNG XUẤT</a>
+                    </li>
+                </ul>
+            </div>
+
         </div>
 
         <!-- <div class="menu_header">

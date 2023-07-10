@@ -20,7 +20,6 @@ import { ForgotComponent } from './forgot/forgot.component';
 import { ForgotPassComponent } from './forgot-pass/forgot-pass.component';
 import { ProductComponent } from './product/product.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
-
 @NgModule({
   declarations: [
     AppComponent,

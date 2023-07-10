@@ -1,0 +1,40 @@
+.product {
+    text-align: center;
+    margin-top: 50px;
+
+}
+
+.product p {
+    height: auto;
+    width: 100%;
+    top: 0;
+    left: 0px;
+    color: var(--c-1684829417589, #721b65);
+    font-size: 16px;
+    text-align: center;
+    margin: 0px 0px 5px;
+    letter-spacing: 3px;
+    display: block;
+    position: relative;
+    font-family: Nunito-Sans, sans-serif;
+}
+
+.sp-item {
+    top: 0;
+    left: 0px;
+    width: 100%;
+
+    position: relative;
+}
+
+img {
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    width: 204px;
+    height: 204px;
+}
+
+img:hover {
+    border: 2px dotted #721b65;
+}

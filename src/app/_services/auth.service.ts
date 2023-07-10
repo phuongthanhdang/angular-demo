@@ -84,4 +84,7 @@ export class AuthService {
       }
     );
   }
+  getProductDetail(id: string) {
+    return this.http.get(AUTH_API + '/product/' + id, {});
+  }
 }
