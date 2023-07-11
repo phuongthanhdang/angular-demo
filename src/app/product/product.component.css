@@ -102,3 +102,17 @@
     color: #fefefe;
     font-size: 0.9rem;
 }
+
+.product-img-item {
+    width: 255px;
+    height: 428px;
+    object-fit: cover;
+    transition: all 0.6s ease 0s
+}
+
+
+.product-img-item:hover {
+    transform: scale(1.1);
+    border: 2px dotted #721b65;
+    transition: all 0.6s ease 0s
+}

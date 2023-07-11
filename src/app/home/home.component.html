@@ -1,8 +1,10 @@
 <app-header></app-header>
 <app-sidebar></app-sidebar>
 <div class="product">
+
     <p>CHẤT LƯỢNG TỐT NHẤT</p>
     <h2>Các loại thú cưng</h2>
+
     <div class="product">
         <div class="container d-flex justify-content-center mt-100">
             <div class="row">
@@ -10,7 +12,8 @@
                     <div class="product-wrapper mb-45 text-center">
                         <div class="product-img">
                             <a href="#" data-abc="true">
-                                <img src="https://fptshop.com.vn/Uploads/images/2015/Tin-Tuc/04/21/Ung_dung_cho_thu_cung(1).jpg"
+                                <img class="img"
+                                    src="https://fptshop.com.vn/Uploads/images/2015/Tin-Tuc/04/21/Ung_dung_cho_thu_cung(1).jpg"
                                     alt="">
                             </a>
                         </div>
@@ -22,7 +25,8 @@
                     <div class="product-wrapper mb-45 text-center">
                         <div class="product-img">
                             <a href="#" data-abc="true">
-                                <img src="https://znews-photo.zingcdn.me/w660/Uploaded/divspivp/2021_07_24/Untitled_1_05.jpg"
+                                <img class="img"
+                                    src="https://znews-photo.zingcdn.me/w660/Uploaded/divspivp/2021_07_24/Untitled_1_05.jpg"
                                     alt="">
                             </a>
                         </div>
@@ -34,22 +38,76 @@
                     <div class="product-wrapper mb-45 text-center">
                         <div class="product-img">
                             <a href="#" data-abc="true">
-                                <img src="https://cdn.pixabay.com/photo/2022/10/10/19/33/cat-7512583_1280.jpg" alt="">
+                                <img class="img"
+                                    src="https://cdn.pixabay.com/photo/2022/10/10/19/33/cat-7512583_1280.jpg" alt="">
                             </a>
                         </div>
+                        <div style="margin-top: 10px; font-weight: bold;">ĐỒ CHO MÈO</div>
                     </div>
-                    <div style="margin-top: 10px; font-weight: bold;">ĐỒ CHO MÈO</div>
 
                 </div>
                 <div class="col-md-3">
                     <div class="product-wrapper mb-45 text-center">
                         <div class="product-img">
                             <a href="#" data-abc="true">
-                                <img src="https://khbvptr.vn/wp-content/uploads/2019/07/vet.jpg" alt="">
+                                <img class="img" src="https://khbvptr.vn/wp-content/uploads/2019/07/vet.jpg" alt="">
                             </a>
                         </div>
+                        <div style="margin-top: 10px; font-weight: bold;">CÁC LOẠI KHÁC</div>
+
                     </div>
-                    <div style="margin-top: 10px; font-weight: bold;">CÁC LOẠI KHÁC</div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="vocher">
+    <div class="vocher-item"><a href="#"><img class="imge-vocher"
+                src="https://cdn.batdongsan.com.vi/gpictures/500x250/3959/MnxBRjFRaXBQZmpyVENqTDR0WTBrRmRiemdvZFVDN0hmak9ld1FYak8tZThULQ.jpg"
+                alt=""></a><button>XEM NGAY</button></div>
+    <div class="vocher-item"><a href=""><img class="imge-vocher"
+                src="https://www.tiendauroi.com/wp-content/uploads/2019/07/9dc2c2985f7b96d5379542c522d887ec6c269c62.jpeg"
+                alt=""></a><button>XEM NGAY</button></div>
+</div>
+<div class="product">
+    <p>CHẤT LƯỢNG TỐT NHẤT</p>
+    <h2>Sản phẩm chính</h2>
+    <div class="product-sp">
+        <div class="container d-flex justify-content-center mt-100">
+            <div class="row">
+
+                <div class="col-md-3" *ngFor="let product of products.data; let i= index">
+                    <div class="product-wrapper mb-45 text-center">
+                        <div class="product-group">
+                            <div class="product-img">
+                                <a href="./product-detail?id={{product.id}}" data-abc="true">
+                                    <img class="product-img-item" src="../../assets/img/product/{{product.image}}"
+                                        alt="">
+                                </a>
+                                <!-- <div class="box">
+                                    <p>
+                                        {{product.name}}
+                                    </p>
+                                </div> -->
+                                <span>{{product.price}} VNĐ </span>
+
+                                <div class="product-action">
+                                    <div class="product-action-style"> <a class="action-plus" title="Quick View"
+                                            data-toggle="modal" data-target="#exampleModal" href="#" data-abc="true"> <i
+                                                class="fa fa-plus"></i> </a> <a class="action-heart" title="Wishlist"
+                                            href="#" data-abc="true"> <i class="fa fa-heart"></i> </a> <a
+                                            class="action-cart" title="Add To Cart" href="#" data-abc="true"> <i
+                                                class="fa fa-shopping-cart"></i>
+                                        </a> </div>
+                                </div>
+                            </div>
+                            <div class="product-name">
+                                {{product.name}}
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
 

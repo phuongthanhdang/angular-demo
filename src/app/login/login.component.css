@@ -1,3 +1,9 @@
 .login {
     padding: 100px 100px;
 }
+
+img {
+    width: 395px;
+    height: 671px;
+    object-fit: cover;
+}
