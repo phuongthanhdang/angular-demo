@@ -226,56 +226,17 @@
                         <div class="card">
                             <div class="card-body">
                                 <h5 class="card-title">Sản phẩm liên quan</h5>
-                                <div class="d-flex mb-3">
+                                <div class="d-flex mb-3"
+                                    *ngFor="let productByLoai of productByLoais.data; let i= index">
                                     <a href="#" class="me-3">
-                                        <img src="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/8.webp"
+                                        <img src="../../assets/img/product/{{productByLoai.image}}"
                                             style="min-width: 96px; height: 96px;" class="img-md img-thumbnail" />
                                     </a>
                                     <div class="info">
                                         <a href="#" class="nav-link mb-1">
-                                            Rucksack Backpack Large <br />
-                                            Line Mounts
+                                            {{productByLoai.name}} <br />
                                         </a>
-                                        <strong class="text-dark"> $38.90</strong>
-                                    </div>
-                                </div>
-
-                                <div class="d-flex mb-3">
-                                    <a href="#" class="me-3">
-                                        <img src="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/9.webp"
-                                            style="min-width: 96px; height: 96px;" class="img-md img-thumbnail" />
-                                    </a>
-                                    <div class="info">
-                                        <a href="#" class="nav-link mb-1">
-                                            Summer New Men's Denim <br />
-                                            Jeans Shorts
-                                        </a>
-                                        <strong class="text-dark"> $29.50</strong>
-                                    </div>
-                                </div>
-
-                                <div class="d-flex mb-3">
-                                    <a href="#" class="me-3">
-                                        <img src="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/10.webp"
-                                            style="min-width: 96px; height: 96px;" class="img-md img-thumbnail" />
-                                    </a>
-                                    <div class="info">
-                                        <a href="#" class="nav-link mb-1"> T-shirts with multiple colors, for men and
-                                            lady
-                                        </a>
-                                        <strong class="text-dark"> $120.00</strong>
-                                    </div>
-                                </div>
-
-                                <div class="d-flex">
-                                    <a href="#" class="me-3">
-                                        <img src="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/11.webp"
-                                            style="min-width: 96px; height: 96px;" class="img-md img-thumbnail" />
-                                    </a>
-                                    <div class="info">
-                                        <a href="#" class="nav-link mb-1"> Blazer Suit Dress Jacket for Men, Blue color
-                                        </a>
-                                        <strong class="text-dark"> $339.90</strong>
+                                        <strong class="text-dark"> {{productByLoai.price}} vnđ</strong>
                                     </div>
                                 </div>
                             </div>

@@ -20,6 +20,8 @@ import { ForgotComponent } from './forgot/forgot.component';
 import { ForgotPassComponent } from './forgot-pass/forgot-pass.component';
 import { ProductComponent } from './product/product.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { GioithieuComponent } from './gioithieu/gioithieu.component';
+import { LienheComponent } from './lienhe/lienhe.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,6 +39,8 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
     ForgotPassComponent,
     ProductComponent,
     ProductDetailComponent,
+    GioithieuComponent,
+    LienheComponent,
   ],
   imports: [
     BrowserModule,

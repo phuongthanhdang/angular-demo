@@ -11,6 +11,8 @@ import { ForgotComponent } from './forgot/forgot.component';
 import { ForgotPassComponent } from './forgot-pass/forgot-pass.component';
 import { ProductComponent } from './product/product.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { GioithieuComponent } from './gioithieu/gioithieu.component';
+import { LienheComponent } from './lienhe/lienhe.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -24,6 +26,8 @@ const routes: Routes = [
   { path: 'forgotpassword', component: ForgotPassComponent },
   { path: 'product', component: ProductComponent },
   { path: 'product-detail', component: ProductDetailComponent },
+  { path: 'gioithieu', component: GioithieuComponent },
+  { path: 'lienhe', component: LienheComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
 ];
 

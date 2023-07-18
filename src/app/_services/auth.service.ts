@@ -87,4 +87,7 @@ export class AuthService {
   getProductDetail(id: string) {
     return this.http.get(AUTH_API + '/product/' + id, {});
   }
+  getProducByLoai(id: string) {
+    return this.http.post(AUTH_API + '/product/loaisp/' + id, {}, httpOptions);
+  }
 }

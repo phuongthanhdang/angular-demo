@@ -1,3 +1,64 @@
+.banner-item {
+    vertical-align: middle;
+    margin-top: 100px;
+    height: 250px;
+    width: 100%;
+    display: flex;
+    object-fit: cover;
+    background-image: linear-gradient(rgb(252, 170, 187), rgb(241, 241, 241), rgb(236, 236, 236), rgb(188, 238, 210), rgb(70, 70, 119), rgb(105, 73, 128), rgb(238, 176, 238));
+}
+
+.item-giơithieu {
+    margin-top: 20px;
+    display: flex;
+    background-color: white;
+}
+
+.item1 {
+    width: 50%;
+    text-align: right;
+    margin-right: 50px;
+}
+
+.item2 {
+    width: 50%;
+    margin-right: 300px;
+}
+
+.item2 .item2-p {
+    height: auto;
+    width: 100%;
+    top: 0;
+    left: 0px;
+    color: var(--c-1684829417589, #721b65);
+    font-size: 16px;
+    margin: 0px 0px 5px;
+    letter-spacing: 3px;
+    display: block;
+    position: relative;
+    font-family: Nunito-Sans, sans-serif;
+}
+
+.item3 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.item3 p {
+    height: auto;
+    width: 100%;
+    top: 0;
+    left: 0px;
+    color: var(--c-1684829417589, #721b65);
+    text-align: center;
+    font-size: 16px;
+    margin: 0px 0px 5px;
+    letter-spacing: 3px;
+    display: block;
+    position: relative;
+    font-family: Nunito-Sans, sans-serif;
+}
+
 @import url(https://fonts.googleapis.com/css?family=Calibri:400,300,700);
 
 .product {
@@ -14,7 +75,7 @@
 .product-wrapper,
 .product-img {
     overflow: hidden;
-    position: relative
+    position: relative,
 }
 
 .mb-45 {
@@ -113,16 +174,43 @@
 
 .product-img-item:hover {
     transform: scale(1.1);
-    border: 2px dotted #721b65;
+
     transition: all 0.6s ease 0s
 }
 
-.banner-item {
-    vertical-align: middle;
-    margin-top: 100px;
-    height: 250px;
-    width: 100%;
+.product-img {
+    width: 285px;
+    height: 285px;
+}
+
+.item4 {
     display: flex;
-    object-fit: cover;
-    background-image: linear-gradient(rgb(252, 170, 187), rgb(241, 241, 241), rgb(236, 236, 236), rgb(188, 238, 210), rgb(70, 70, 119), rgb(105, 73, 128), rgb(238, 176, 238));
+    margin-top: 50px;
+    padding: 0 350px 0 350px;
+    background-color: #f5f0f0;
+    box-shadow: 5px 10px 8px #9e9898;
+}
+
+.item4-div {
+    width: 25%;
+    background-color: #f5f0f0;
+    display: flex;
+    height: 100px;
+    margin-top: 50px;
+
+}
+
+.item4-img {
+    width: 25%;
+    text-align: right;
+    margin-right: 15px;
+    margin-top: 8px;
+}
+
+.item4-div-group h6 {
+    font-size: 15px;
+}
+
+.item4-div-group p {
+    font-size: 12px;
 }
