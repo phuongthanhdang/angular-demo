@@ -22,6 +22,7 @@ import { ProductComponent } from './product/product.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { GioithieuComponent } from './gioithieu/gioithieu.component';
 import { LienheComponent } from './lienhe/lienhe.component';
+import { GoogleMapsModule } from '@angular/google-maps';
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,6 +49,7 @@ import { LienheComponent } from './lienhe/lienhe.component';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
+    GoogleMapsModule,
   ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent],

@@ -81,6 +81,13 @@
     </div>
 </div>
 
-<div class="map" #mapElement></div>
+<div class="map">
+    <!-- google-maps-demo.component.html -->
+    <google-map height="600px" width="100%" [center]="center" [zoom]="zoom">
+        <map-marker *ngFor="let markerPosition of markerPositions" [position]="markerPosition"
+            [options]="markerOptions"></map-marker>
+    </google-map>
+
+</div>
 
 <app-footer></app-footer>
