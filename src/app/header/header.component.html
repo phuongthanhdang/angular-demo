@@ -48,10 +48,15 @@
                 </ul>
                 <ul *ngIf="isLoggedIn">
                     <li style="display: flex;">
-
-                        <a href="" class="nav-link" routerLink="profile" (click)="profile()">{{ username }}</a>
-
+                        <a href="" class="nav-link" routerLink="profile" (click)="profile()" style="display: flex;">{{
+                            username }} <i class="fa fa-shopping-cart" style="font-size:20px; margin-top: 5px;">
+                            </i></a>
                     </li>
+                    <p
+                        style="margin: 20px 175px 10px 130px; position: absolute; color: red; font-size: 18px; margin-bottom: 50px;">
+                        0
+                    </p>
+
                     <li>
                         <a href class="nav-link" (click)="logout()">ĐĂNG XUẤT</a>
                     </li>
@@ -59,11 +64,6 @@
             </div>
 
         </div>
-
-        <!-- <div class="menu_header">
-           
-           
-        </div> -->
     </nav>
 
 </header>

@@ -28,10 +28,6 @@ export class LienheComponent implements OnInit {
       lat: 10.749042190359019,
       lng: 106.72877450650316,
     },
-    {
-      lat: 10.737562204804258,
-      lng: 106.725524068581,
-    },
   ];
   addMarker(event: google.maps.MapMouseEvent) {
     if (event.latLng != null) this.markerPositions.push(event.latLng.toJSON());

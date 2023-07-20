@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { TokenStorageService } from './token-storage.service';
+import { Router } from '@angular/router';
 const AUTH_API = 'http://localhost:3000';
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
@@ -13,7 +14,8 @@ const httpOptions = {
 export class AuthService {
   constructor(
     private http: HttpClient,
-    private tokenStorageService: TokenStorageService
+    private tokenStorageService: TokenStorageService,
+    private router: Router
   ) {}
   url: any;
   requestOptions: any;
@@ -89,5 +91,19 @@ export class AuthService {
   }
   getProducByLoai(id: string) {
     return this.http.post(AUTH_API + '/product/loaisp/' + id, {}, httpOptions);
+  }
+  addToCart(idProduct: string, count: number, token: string) {
+    // this.token = this.tokenStorageService.getUser().data.accessToken;
+
+    return this.http.post(
+      AUTH_API + '/cart/add-cart',
+      { idProduct, count },
+      {
+        headers: new HttpHeaders({
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${token}`,
+        }),
+      }
+    );
   }
 }

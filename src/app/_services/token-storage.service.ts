@@ -27,6 +27,6 @@ export class TokenStorageService {
       return JSON.parse(user);
     }
 
-    return {};
+    return null;
   }
 }
