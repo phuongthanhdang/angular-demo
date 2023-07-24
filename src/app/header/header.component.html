@@ -20,9 +20,8 @@
             <li><a href="/gioithieu">GIỚI THIỆU</a></li>
             <li>
                 <a href="#">SẢN PHẨM <span class="arrow">&#9660;</span></a>
-
                 <ul class="sub-menu">
-                    <li><a href="#">Tất cả</a></li>
+                    <li><a href="./product">Tất cả</a></li>
                     <li><a href="#">Đồ cho chó</a></li>
                     <li><a href="#">Đồ cho mèo</a></li>
                     <li><a href="#">Chim cảnh</a></li>
@@ -48,13 +47,14 @@
                 </ul>
                 <ul *ngIf="isLoggedIn">
                     <li style="display: flex;">
-                        <a href="" class="nav-link" routerLink="profile" (click)="profile()" style="display: flex;">{{
-                            username }} <i class="fa fa-shopping-cart" style="font-size:20px; margin-top: 5px;">
-                            </i></a>
+                        <a class="nav-link" routerLink="profile" (click)="profile()" style="display: flex;">{{
+                            username }} </a>
+                        <i (click)="giohang()" class="fa fa-shopping-cart" style="font-size:20px; margin-top: 15px;">
+                        </i>
                     </li>
                     <p
-                        style="margin: 20px 175px 10px 130px; position: absolute; color: red; font-size: 18px; margin-bottom: 50px;">
-                        0
+                        style="margin: 20px 175px 10px 200px; position: absolute; color: red; font-size: 18px; margin-bottom: 50px;">
+                        {{dem}}
                     </p>
 
                     <li>

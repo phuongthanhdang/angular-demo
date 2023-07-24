@@ -106,4 +106,37 @@ export class AuthService {
       }
     );
   }
+  getCountCart(token: string) {
+    // this.token = this.tokenStorageService.getUser().data.accessToken;
+    return this.http.post(
+      AUTH_API + '/cart/get-cart',
+      {},
+      {
+        headers: new HttpHeaders({
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${token}`,
+        }),
+      }
+    );
+  }
+  updateCountCart(id: string, count: number) {
+    return this.http.post(
+      AUTH_API + '/cart/update-cart',
+      {
+        id,
+        count,
+      },
+      httpOptions
+    );
+  }
+
+  deleteCart(id: string) {
+    return this.http.post(
+      AUTH_API + '/cart/delete-cart',
+      {
+        id,
+      },
+      httpOptions
+    );
+  }
 }

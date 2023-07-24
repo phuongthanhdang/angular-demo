@@ -13,6 +13,7 @@ import { ProductComponent } from './product/product.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { GioithieuComponent } from './gioithieu/gioithieu.component';
 import { LienheComponent } from './lienhe/lienhe.component';
+import { GiohangComponent } from './giohang/giohang.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -28,6 +29,7 @@ const routes: Routes = [
   { path: 'product-detail', component: ProductDetailComponent },
   { path: 'gioithieu', component: GioithieuComponent },
   { path: 'lienhe', component: LienheComponent },
+  { path: 'giohang', component: GiohangComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
 ];
 

@@ -1,0 +1,57 @@
+<app-header></app-header>
+<div class="banner-item">
+    <div style="float: left; width: 50%; vertical-align: middle; padding: 100px 100px 100px 350px;">
+        <h2>GIỎ HÀNG</h2>
+    </div>
+    <div style="float: right; width: 30%; background-image: url(../../assets/img/banner.png);">
+    </div>
+</div>
+<div class="giohang">
+    <h4>GIỎ HÀNG</h4>
+    <div *ngFor="let item of countCart; let i= index">
+        <hr>
+        <div class="item-giohang">
+            <div style="width: 20%;"><img src="../../assets/img/product/{{item.image}}" alt="" width="116px"
+                    height="114px"></div>
+            <div style="width: 40%;">
+                <p style="margin-left: 10px;">{{item.name}}</p>
+            </div>
+            <div class="count-giohang">
+                <div class="count-giohang-item">
+                    <p>Đơn giá:</p>
+                    <p style="margin-left: 10px;">{{item.price}}<sup>vnđ</sup>
+                    </p>
+                    <p style="margin-left: 200px;" (click)="delete(item.idCart)"><i class="fa-regular fa-trash-can"></i>
+                    </p>
+                </div>
+                <div class="count-giohang-item">
+                    <p>Số lượng: </p>
+                    <div class="soluong">
+                        <button style="width: 25px; background-color: rgb(246, 247, 247);"
+                            (click)="down(item.idCart,item.quantity)"> <i class="fas fa-minus"></i></button>
+                        <div style="width: 30px; text-align: center; margin-top: 5px;">{{item.quantity}}</div>
+                        <button style=" width: 25px;background-color: rgb(246, 247, 247);"
+                            (click)="up(item.idCart,item.quantity)"> <i class="fas fa-plus"></i></button>
+                    </div>
+                </div>
+
+                <div class="count-giohang-item">
+                    <p>Thành tiền: </p>
+                    <p style="margin-left: 10px;">{{item.quantity * item.price}}<sup>vnđ</sup></p>
+                </div>
+            </div>
+        </div>
+        <hr>
+    </div>
+
+    <div class="thanhtien">
+        <div>Tổng tiền: {{thanhtien}}<sup>vnđ</sup>
+        </div>
+        <div class="item-thanhtien">
+            <button type="button" class="btn btn-primary">THANH TOÁN</button>
+            <button type="button" class="btn btn-warning">XEM SẢN PHẨM</button>
+        </div>
+    </div>
+</div>
+
+<app-footer></app-footer>

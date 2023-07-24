@@ -156,7 +156,6 @@
     z-index: -1;
     /*làm mờ khung màu*/
     filter: blur(50px);
-
 }
 
 .box p {

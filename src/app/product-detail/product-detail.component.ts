@@ -86,7 +86,7 @@ export class ProductDetailComponent implements OnInit {
       this.authService.addToCart(idProduct, count, this.token).subscribe(
         (data) => {
           this.message = true;
-          alert('Thành công');
+          window.location.reload();
         },
         (err) => {
           this.errorMessage = err.error.message;

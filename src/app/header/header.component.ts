@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { TokenStorageService } from '../_services/token-storage.service';
 import { Router } from '@angular/router';
+import { AuthService } from '../_services/auth.service';
+import { count } from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -10,7 +12,8 @@ import { Router } from '@angular/router';
 export class HeaderComponent implements OnInit {
   constructor(
     private tokenStorageService: TokenStorageService,
-    private router: Router
+    private router: Router,
+    private authService: AuthService
   ) {}
   categories = [
     { name: 'home', link: '#' },
@@ -25,6 +28,11 @@ export class HeaderComponent implements OnInit {
   showMenu = false;
   isLoggedIn = false;
   username?: string;
+  token: any;
+  message = false;
+  errorMessage = '';
+  dem = 0;
+  countCart: any;
   private roles: string[] = [];
   toggleVisible = () => {
     const scrolled = document.documentElement.scrollTop;
@@ -44,10 +52,24 @@ export class HeaderComponent implements OnInit {
     if (this.isLoggedIn) {
       const user = this.tokenStorageService.getUser();
       this.roles = user.data.role;
-
+      this.token = user.data.accessToken;
       this.username = user.data.username;
+      this.authService.getCountCart(this.token).subscribe(
+        (data) => {
+          this.message = true;
+          this.countCart = data;
+          this.countCart = this.countCart.data.product;
+          this.countCart.forEach((element: any) => {
+            console.log('element', element);
+            this.dem += element.quantity;
+          });
+        },
+        (err) => {
+          this.errorMessage = err.error.message;
+        }
+      );
     }
-    console.log('token', this.isLoggedIn);
+
     return () => {
       window.removeEventListener('scroll', this.toggleVisible);
     };
@@ -67,5 +89,8 @@ export class HeaderComponent implements OnInit {
   }
   login() {
     this.router.navigate(['/login']);
+  }
+  giohang() {
+    this.router.navigate(['/giohang']);
   }
 }

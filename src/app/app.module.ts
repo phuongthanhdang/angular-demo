@@ -23,6 +23,7 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { GioithieuComponent } from './gioithieu/gioithieu.component';
 import { LienheComponent } from './lienhe/lienhe.component';
 import { GoogleMapsModule } from '@angular/google-maps';
+import { GiohangComponent } from './giohang/giohang.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,6 +43,7 @@ import { GoogleMapsModule } from '@angular/google-maps';
     ProductDetailComponent,
     GioithieuComponent,
     LienheComponent,
+    GiohangComponent,
   ],
   imports: [
     BrowserModule,
