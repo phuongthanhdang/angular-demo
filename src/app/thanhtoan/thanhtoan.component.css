@@ -1,0 +1,92 @@
+.banner-item {
+    vertical-align: middle;
+    margin-top: 100px;
+    height: 250px;
+    width: 100%;
+    display: flex;
+    object-fit: cover;
+    background-image: linear-gradient(rgb(252, 170, 187), rgb(241, 241, 241), rgb(236, 236, 236), rgb(188, 238, 210), rgb(70, 70, 119), rgb(105, 73, 128), rgb(238, 176, 238));
+}
+
+.thanhtoan {
+    margin-top: 20px;
+
+}
+
+.thanhtoan-item {
+    margin: 0 400px;
+}
+
+.item {
+    display: flex;
+}
+
+.item1 {
+    width: 60%;
+    margin-right: 20px;
+}
+
+.item2 {
+    width: 40%;
+}
+
+.item1-1 {
+    display: flex;
+}
+
+.item1-2 {
+    padding: 0 10px 0 10px;
+    background-color: white;
+    box-shadow: 5px 5px 5px 5px #f0efef;
+}
+
+.itemfrom {
+    display: flex;
+}
+
+.title {
+    width: 50%;
+    font-size: 14px;
+    margin-left: 10px;
+    font-weight: 600;
+    color: black;
+    margin: 0 25px;
+}
+
+#fname {
+    border: 2px solid rgb(230, 226, 226);
+    margin-left: 10px;
+    font-weight: 600;
+    border-radius: 5px;
+
+}
+
+.itemfrom .form-control {
+    margin: 0 25px;
+    margin-top: 10px;
+}
+
+.item-tt {
+    margin-left: 10px;
+}
+
+.item-tt p {
+    font-size: 13px;
+    margin: 0 0;
+}
+
+del {
+    font-size: 14px;
+    text-decoration: line-through;
+}
+
+.thanhtien {
+
+    display: flex;
+    margin: 0 0;
+}
+
+.thanhtien p {
+    margin-left: 10px;
+    font-size: 14px;
+}

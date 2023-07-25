@@ -14,6 +14,7 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { GioithieuComponent } from './gioithieu/gioithieu.component';
 import { LienheComponent } from './lienhe/lienhe.component';
 import { GiohangComponent } from './giohang/giohang.component';
+import { ThanhtoanComponent } from './thanhtoan/thanhtoan.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -30,6 +31,7 @@ const routes: Routes = [
   { path: 'gioithieu', component: GioithieuComponent },
   { path: 'lienhe', component: LienheComponent },
   { path: 'giohang', component: GiohangComponent },
+  { path: 'thanhtoan', component: ThanhtoanComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
 ];
 

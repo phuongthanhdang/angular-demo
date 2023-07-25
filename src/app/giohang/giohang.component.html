@@ -19,9 +19,10 @@
             <div class="count-giohang">
                 <div class="count-giohang-item">
                     <p>Đơn giá:</p>
-                    <p style="margin-left: 10px;">{{item.price}}<sup>vnđ</sup>
+                    <p style="margin-left: 10px; color: brown; font-weight: 600;">{{item.price}}<sup>vnđ</sup>
                     </p>
-                    <p style="margin-left: 200px;" (click)="delete(item.idCart)"><i class="fa-regular fa-trash-can"></i>
+                    <p style=" margin-left: 200px;" (click)="delete(item.idCart)"><i
+                            class="fa-regular fa-trash-can"></i>
                     </p>
                 </div>
                 <div class="count-giohang-item">
@@ -37,7 +38,8 @@
 
                 <div class="count-giohang-item">
                     <p>Thành tiền: </p>
-                    <p style="margin-left: 10px;">{{item.quantity * item.price}}<sup>vnđ</sup></p>
+                    <p style="margin-left: 10px; color: brown; font-weight: 600;">{{item.quantity *
+                        item.price}}<sup>vnđ</sup></p>
                 </div>
             </div>
         </div>
@@ -45,11 +47,13 @@
     </div>
 
     <div class="thanhtien">
-        <div>Tổng tiền: {{thanhtien}}<sup>vnđ</sup>
+        <div style="color: brown; font-weight: 700;">Tổng tiền: {{thanhtien}}<sup>vnđ</sup>
         </div>
         <div class="item-thanhtien">
             <button type="button" class="btn btn-primary">THANH TOÁN</button>
-            <button type="button" class="btn btn-warning">XEM SẢN PHẨM</button>
+            <div>&nbsp;</div>
+            <button type="button" class="btn btn-warning">XEM SẢN
+                PHẨM</button>
         </div>
     </div>
 </div>

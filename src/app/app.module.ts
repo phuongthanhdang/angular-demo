@@ -24,6 +24,7 @@ import { GioithieuComponent } from './gioithieu/gioithieu.component';
 import { LienheComponent } from './lienhe/lienhe.component';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { GiohangComponent } from './giohang/giohang.component';
+import { ThanhtoanComponent } from './thanhtoan/thanhtoan.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,6 +45,7 @@ import { GiohangComponent } from './giohang/giohang.component';
     GioithieuComponent,
     LienheComponent,
     GiohangComponent,
+    ThanhtoanComponent,
   ],
   imports: [
     BrowserModule,
