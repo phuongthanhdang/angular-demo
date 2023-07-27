@@ -139,4 +139,10 @@ export class AuthService {
       httpOptions
     );
   }
+  raedJson(): Observable<any> {
+    return this.http.get(
+      'https://raw.githubusercontent.com/kenzouno1/DiaGioiHanhChinhVN/master/data.json',
+      { responseType: 'json' }
+    );
+  }
 }

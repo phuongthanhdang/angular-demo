@@ -70,17 +70,39 @@
                         </div>
                     </div>
                     <div class="itemfrom">
+                        <select class="form-select form-select-sm mb-3" id="city" aria-label=".form-select-sm"
+                            (change)="changeCity($event)">
+                            <option value="00" selected>---Chọn tỉnh thành---</option>
+                            <option *ngFor="let city of citys; let i= index" value={{city.Id}}>{{city.Name}}</option>
+                        </select>
+                    </div>
+                    <div class="itemfrom">
+                        <select class="form-select form-select-sm mb-3" id="city" aria-label=".form-select-sm"
+                            (change)="changeDistrits($event)">
+                            <option value="" selected>---Chọn Quận/Huyện---</option>
+                            <option *ngFor="let district of districts; let i= index" value={{district.Id}} selected>
+                                {{district.Name}}
+                            </option>
+                        </select>
+                    </div>
+                    <div class="itemfrom">
                         <select class="form-select form-select-sm mb-3" id="city" aria-label=".form-select-sm">
-                            <option value="" selected>Chọn tỉnh thành</option>
+                            <option value="" selected>---Chọn phường/xã--- </option>
+                            <option *ngFor="let ward of wards; let i= index" value={{ward.Id}} selected>
+                                {{ward.Name}}
+                            </option>
                         </select>
+                    </div>
 
-                        <select class="form-select form-select-sm mb-3" id="district" aria-label=".form-select-sm">
-                            <option value="" selected>Chọn quận huyện</option>
-                        </select>
-
-                        <select class="form-select form-select-sm" id="ward" aria-label=".form-select-sm">
-                            <option value="" selected>Chọn phường xã</option>
-                        </select>
+                </div>
+                <div class="item1-1">
+                    <i class="fa-solid fa-location-dot" style="margin: 12px 10px 0 0 ;"></i>
+                    <p>HÌNH THỨC THANH TOÁN</p>
+                </div>
+                <div class="item1-2">
+                    <div style="width: 50%; margin-top: 10px; background-color: #cde9ff; padding: 10px 15px;
+                    color: #856404; border: 1px solid #fff3cd; border-radius: 5px; font-size: 13px;">
+                        Thanh toán khi nhận hàng
                     </div>
 
                 </div>
@@ -111,7 +133,6 @@
                         <div class="thanhtien">
                             <p style="width: 50%;">Tạm tính</p>
                             <p style="width: 50%; color: red; margin-left: 200px; font-size: 16px;">156.750đ</p>
-
                         </div>
 
                         <div class="thanhtien">
